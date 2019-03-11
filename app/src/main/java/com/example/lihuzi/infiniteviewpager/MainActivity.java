@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
             View initCurrentView(View v, int position) {
                 ImageView iv = v.findViewById(R.id.item_main_iv);
                 Glide.with(_viewpager.getContext()).load(pictureList.get(position)).into(iv);
+                DLFloatViewGroup floatView = v.findViewById(R.id.item_main_floatview);
+                floatView.initDLFloatView(null,null);
+                int visible = position == pictureList.size() - 1 ? View.VISIBLE : View.GONE;
+                System.out.println("visible:" + visible);
+                floatView.setVisibility(visible);
                 return v;
             }
 
