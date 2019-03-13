@@ -183,6 +183,7 @@ public class DLFloatViewGroup extends RelativeLayout {
             }
             break;
         }
+        getParent().requestDisallowInterceptTouchEvent(true);
         return true;
     }
 
