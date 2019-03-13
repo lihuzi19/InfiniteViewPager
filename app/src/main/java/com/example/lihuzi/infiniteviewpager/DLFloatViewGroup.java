@@ -183,7 +183,6 @@ public class DLFloatViewGroup extends RelativeLayout {
             }
             break;
         }
-        getParent().requestDisallowInterceptTouchEvent(true);
         return true;
     }
 
@@ -238,11 +237,9 @@ public class DLFloatViewGroup extends RelativeLayout {
     }
 
     private void sendInterceptBroadcast(boolean intercept) {
-//        Intent i = new Intent();
-//        i.putExtra("intercept", intercept);
-//        DLLocalBroadcast.sendBrocast(i, DLLocalBrocastType.BROADCAST_TYPE_MAIN_FRAME_VIEWPAGER);
         /**
          * viewpager自带手势拦截，这里需要强制拦截
          */
+        getParent().requestDisallowInterceptTouchEvent(intercept);
     }
 }
