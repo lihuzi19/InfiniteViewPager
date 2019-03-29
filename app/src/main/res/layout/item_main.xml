@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,14 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <com.example.lihuzi.infiniteviewpager.DLFloatViewGroup
+    <com.example.lihuzi.infiniteviewpager.ui.view.DLFloatViewGroup
         android:id="@+id/item_main_floatview"
-        android:layout_width="match_parent"
-        android:visibility="gone"
-        android:layout_height="match_parent" />
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
     <TextView
         android:layout_width="wrap_content"
-        android:visibility="gone"
         android:layout_height="wrap_content"
-        android:text="hello000000000000000000"/>
+        android:text="hello000000000000000000"
+        android:visibility="gone"
+        tools:visibility="visible" />
 </RelativeLayout>

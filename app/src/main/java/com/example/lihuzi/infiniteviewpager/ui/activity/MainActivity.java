@@ -1,4 +1,4 @@
-package com.example.lihuzi.infiniteviewpager;
+package com.example.lihuzi.infiniteviewpager.ui.activity;
 
 
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.lihuzi.infiniteviewpager.R;
+import com.example.lihuzi.infiniteviewpager.ui.adapter.WholePictureDisplayAdapter;
+import com.example.lihuzi.infiniteviewpager.ui.view.DLFloatViewGroup;
 
 import java.util.ArrayList;
 
@@ -32,16 +35,16 @@ public class MainActivity extends AppCompatActivity {
         pictureList.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547793747&di=422d3887efee0b0437ec457588dfa9a2&imgtype=jpg&er=1&src=http%3A%2F%2Fpic1.win4000.com%2Fmobile%2F2019-01-07%2F5c33056a66916.jpg");
         WholePictureDisplayAdapter adapter = new WholePictureDisplayAdapter() {
             @Override
-            int setCount() {
+            public int setCount() {
                 return pictureList.size();
             }
 
             @Override
-            View initCurrentView(View v, int position) {
+            public View initCurrentView(View v, int position) {
                 ImageView iv = v.findViewById(R.id.item_main_iv);
                 Glide.with(_viewpager.getContext()).load(pictureList.get(position)).into(iv);
                 DLFloatViewGroup floatView = v.findViewById(R.id.item_main_floatview);
-                floatView.initDLFloatView(null,null);
+                floatView.initDLFloatView(null, null);
                 int visible = position == pictureList.size() - 1 ? View.VISIBLE : View.GONE;
                 System.out.println("visible:" + visible);
                 floatView.setVisibility(visible);
@@ -49,12 +52,12 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            int setResourceId(int resId) {
+            public int setResourceId(int resId) {
                 return R.layout.item_main;
             }
 
             @Override
-            ViewPager setViewPager() {
+            public ViewPager setViewPager() {
                 return _viewpager;
             }
         };

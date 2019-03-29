@@ -1,4 +1,4 @@
-package com.example.lihuzi.infiniteviewpager;
+package com.example.lihuzi.infiniteviewpager.ui.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
@@ -7,16 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.lihuzi.infiniteviewpager.R;
+
 import java.util.ArrayList;
 
 public abstract class WholePictureDisplayAdapter extends PagerAdapter {
-    abstract int setCount();
+    public abstract int setCount();
 
-    abstract View initCurrentView(View v, int position);
+    public abstract View initCurrentView(View v, int position);
 
-    abstract int setResourceId(int resId);
+    public abstract int setResourceId(int resId);
 
-    abstract ViewPager setViewPager();
+    public abstract ViewPager setViewPager();
 
     private boolean infinite;
 

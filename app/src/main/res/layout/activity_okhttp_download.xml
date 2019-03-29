@@ -3,11 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.MainActivity">
+    tools:context=".ui.activity.OKHttpDownloadActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/act_main_viewpager"
+    <TextView
+        android:id="@+id/act_okhttp_download_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="download" />
+
+    <ImageView
+        android:id="@+id/act_okhttp_download_iv"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 </RelativeLayout>

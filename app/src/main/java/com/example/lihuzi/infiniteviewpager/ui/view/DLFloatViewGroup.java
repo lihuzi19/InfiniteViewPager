@@ -1,4 +1,4 @@
-package com.example.lihuzi.infiniteviewpager;
+package com.example.lihuzi.infiniteviewpager.ui.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.lihuzi.infiniteviewpager.R;
 
 
 /**
@@ -202,7 +204,6 @@ public class DLFloatViewGroup extends RelativeLayout {
         }
         x -= parentLeft;
         y -= parentTop;
-        System.out.println("x:" + x + ",y:" + y);
         return new float[]{x, y};
     }
 

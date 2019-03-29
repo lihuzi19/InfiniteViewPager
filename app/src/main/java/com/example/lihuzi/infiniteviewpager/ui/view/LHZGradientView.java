@@ -1,4 +1,4 @@
-package com.example.lihuzi.infiniteviewpager;
+package com.example.lihuzi.infiniteviewpager.ui.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,6 +8,8 @@ import android.graphics.Paint;
 import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.example.lihuzi.infiniteviewpager.R;
 
 public class LHZGradientView extends View {
     public LHZGradientView(Context context) {
